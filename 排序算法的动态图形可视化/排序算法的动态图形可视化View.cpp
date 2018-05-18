@@ -69,30 +69,6 @@ void C排序算法的动态图形可视化View::OnDraw(CDC* pDC)
 	ASSERT_VALID(pDoc);
 	if (!pDoc)
 		return;
-	CPen newPen;
-	newPen.CreatePen(PS_SOLID, 3, RGB(0, 0, 0));
-	pDC->SelectObject(&newPen);
-	//pDC->MoveTo(300, 0);
-	//pDC->LineTo(200, 300);
-	//pDC->MoveTo(700, 0);
-	//pDC->LineTo(700, 200);
-	//pDC->MoveTo(0, 200);
-	//pDC->LineTo(100, 200);
-	//pDC->MoveTo(400, 500);
-	//pDC->LineTo(400, 300);
-	//pDC->Ellipse(50, 50, 55, 55);
-	//pDC->Ellipse(880, 350, 885, 355);
-	pDC->SelectStockObject(BLACK_PEN);
-
-	CRect rectClient;
-	GetClientRect(&rectClient);
-
-	CRect rectScroll;
-	rectScroll.left = 0;
-	rectScroll.right = rectClient.Width();
-	rectScroll.top = 0;
-	rectScroll.bottom = 100 * 30;  //大概先设置100条数据吧
-
 }
 
 
@@ -388,16 +364,6 @@ void C排序算法的动态图形可视化View::OnGen10Nums()
 		a[i] = rand() % 60;
 	}
 	DisplayNums();
-	//CString str;
-	//for (int i = 0;i < len;i++)
-	//{
-	//	a[i] = rand()%60;
-	//	PenColor(0, 0, 0, i * 50 + 50, 600 - a[i] * 10);
-	//	str.Format(TEXT("%d"), a[i]);
-	//	pDC->TextOutW(i * 50 + 45,610, str);//数字位置
-	//	//pDC->FillSolidRect(CRect(300, 300, 400, 350), RGB(0, 255, 255));//覆盖矩形区域的数字
-	//}
-	//ReleaseDC(pDC);
 }
 
 void C排序算法的动态图形可视化View::DisplayNums()
