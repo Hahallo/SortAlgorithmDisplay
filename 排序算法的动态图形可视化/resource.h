@@ -84,9 +84,6 @@
 #define IDS_FIND_TAB                    302
 #define IDS_EXPLORER                    305
 #define IDS_EDIT_MENU                   306
-#define IDD_DIALOG1                     310
-#define IDD_DIALOG2                     312
-#define IDC_EDIT1                       1000
 #define ID_32771                        32771
 #define ID_Menu                         32772
 #define ID_Menu32773                    32773

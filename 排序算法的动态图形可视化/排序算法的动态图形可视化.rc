@@ -377,26 +377,6 @@ BEGIN
     DEFPUSHBUTTON   "确定",IDOK,113,41,50,14,WS_GROUP
 END
 
-IDD_DIALOG1 DIALOGEX 0, 0, 310, 177
-STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
-CAPTION "Dialog"
-FONT 8, "MS Shell Dlg", 400, 0, 0x1
-BEGIN
-    DEFPUSHBUTTON   "确定",IDOK,75,124,50,14
-    PUSHBUTTON      "取消",IDCANCEL,178,125,50,14
-    EDITTEXT        IDC_EDIT1,77,79,101,28,ES_AUTOHSCROLL
-END
-
-IDD_DIALOG2 DIALOGEX 0, 0, 310, 177
-STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
-CAPTION "Dialog"
-FONT 8, "MS Shell Dlg", 400, 0, 0x1
-BEGIN
-    DEFPUSHBUTTON   "确定",IDOK,199,156,50,14
-    PUSHBUTTON      "取消",IDCANCEL,253,156,50,14
-    EDITTEXT        IDC_EDIT1,106,67,40,14,ES_AUTOHSCROLL
-END
-
 
 /////////////////////////////////////////////////////////////////////////////
 //
@@ -452,40 +432,8 @@ BEGIN
         TOPMARGIN, 7
         BOTTOMMARGIN, 55
     END
-
-    IDD_DIALOG1, DIALOG
-    BEGIN
-        LEFTMARGIN, 7
-        RIGHTMARGIN, 303
-        TOPMARGIN, 7
-        BOTTOMMARGIN, 170
-    END
-
-    IDD_DIALOG2, DIALOG
-    BEGIN
-        LEFTMARGIN, 7
-        RIGHTMARGIN, 303
-        TOPMARGIN, 7
-        BOTTOMMARGIN, 170
-    END
 END
 #endif    // APSTUDIO_INVOKED
-
-
-/////////////////////////////////////////////////////////////////////////////
-//
-// AFX_DIALOG_LAYOUT
-//
-
-IDD_DIALOG1 AFX_DIALOG_LAYOUT
-BEGIN
-    0
-END
-
-IDD_DIALOG2 AFX_DIALOG_LAYOUT
-BEGIN
-    0
-END
 
 
 /////////////////////////////////////////////////////////////////////////////

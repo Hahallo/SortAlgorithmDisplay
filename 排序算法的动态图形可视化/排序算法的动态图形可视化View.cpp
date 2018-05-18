@@ -197,6 +197,7 @@ void C排序算法的动态图形可视化View::OnTimer(UINT_PTR nIDEvent)
 				PenColor(0, 255, 0, 50, 600 - p_bubble[last] * 10);
 				KillTimer(1);
 				MessageBox(L"冒泡排序完成！");
+				bubble = FALSE;
 			}
 			else if (first == last)
 			{
@@ -228,6 +229,7 @@ void C排序算法的动态图形可视化View::OnTimer(UINT_PTR nIDEvent)
 		{
 			KillTimer(1);
 			MessageBox(L"结束！");
+			bubble = FALSE;
 		}
 		break;
 	case 2:
@@ -237,6 +239,7 @@ void C排序算法的动态图形可视化View::OnTimer(UINT_PTR nIDEvent)
 			{
 				KillTimer(2);
 				MessageBox(L"插入排序结束！");
+				selection = FALSE;
 			}
 			else if (first < len)
 			{
@@ -279,6 +282,7 @@ void C排序算法的动态图形可视化View::OnTimer(UINT_PTR nIDEvent)
 		{
 			KillTimer(2);
 			MessageBox(L"结束！");
+			selection = FALSE;
 		}
 		break;
 	default:
@@ -332,7 +336,7 @@ void C排序算法的动态图形可视化View::OnQuickSort()
 {
 	low = 0;
 	high = len - 1;
-	if (!bubble || selection || quick)//当没有一个为true时
+	if (!(bubble || selection || quick))//当没有一个为true时
 	{
 		quick = TRUE;
 		selection = FALSE;
@@ -341,6 +345,7 @@ void C排序算法的动态图形可视化View::OnQuickSort()
 		 Copy(p_quick);
 		 QuickSort(low, high);
 		 MessageBox(L"快速排序结束！");
+		 quick = FALSE;
 	}
 }
 
@@ -422,7 +427,7 @@ void C排序算法的动态图形可视化View::Copy(int*p)
 
 void C排序算法的动态图形可视化View::Onbubblesort()
 {
-	if (!bubble || selection || quick)//当没有一个为true时
+	if (!(bubble || selection || quick))//当没有一个为true时
 	{
 		bubble = TRUE;
 		selection = FALSE;
@@ -462,8 +467,6 @@ void C排序算法的动态图形可视化View::OnSelectionSort()
 		SetTimer(2, 100, NULL);
 	}
 }
-
-
 
 
 
